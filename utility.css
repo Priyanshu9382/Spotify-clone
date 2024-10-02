@@ -1,0 +1,40 @@
+.border-red{
+    border: 2px solid red;
+}
+.border{
+    border-radius: 10px;
+}
+.border-white{
+    border: 1px solid white;
+}
+.flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #121212;
+}
+.inline{
+    display: inline;
+}
+.imgCard{
+    margin: 9px;
+    width: 90%;
+    height: 60%;
+    border-radius: 10px;
+}
+.pointer{
+    cursor: pointer;
+}

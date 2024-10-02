@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="media.css" />
+    <link rel="icon" href="favicon.ico">
+  </head>
+  <body>
+    <!-- Creating a navbar -->
+    <div class="navbar flex bg-black">
+      <div class="nav-left flex invert">
+        <!-- hamburger for mobile users -->
+         <div class="hamburger">
+          <img src="hamburger.svg" alt="" class="pointer">
+         </div>
+         <!-- cross sign after clicking hamburger -->
+          <div class="cross">
+            <img src="cross.svg" alt="" class="pointer">
+          </div>
+        <!--Left navbar containing the logo -->
+        <div class="logo pointer">
+          <img src="logo.svg" alt="logo" />
+        </div>
+      </div>
+      <div class="nav-mid invert flex">
+        <!--Middle navbar containing the search bar-->
+        <!--Home icon-->
+        <div class="circleBackground flex items-center justify-content pointer">
+          <div class="home  flex justify-content items-center">
+            <img
+              src="home.svg"
+              alt="home"
+              width="23px"
+              style="padding-left: 2px;padding-bottom: 13px;"
+            />
+          </div>
+        </div>
+        <!--Searchbar-->
+        <div class="flex items-center">
+          <div class="searchbar flex items-center">
+            <div class="searchButton pointer">
+              <img src="search.svg" alt="search" width="25px" />
+            </div>
+            <div class="search-space">
+              <input
+                class="input pointer"
+                type="search"
+                placeholder="What do you want to play?"
+              />
+            </div>
+            <div class="browse pointer">
+              <img src="browse.svg" alt="browse" style="width: 25px;padding-top: 3px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Right navbar containing Sign up and login button-->
+      <div class="nav-right flex">
+        <div class="sign-up">
+          <button class="bg-black pointer" id="signup">Sign up</button>
+        </div>
+        <div class="login pointer">
+          <button id="login" class="pointer"><b>Log in</b></button>
+        </div>
+      </div>
+    </div>
+
+    <!--Two main div:- Left and Right -->
+    <!--Creating left div-->
+    <div class="container flex bg-black">
+      <div class="left border bg-grey">
+        <div class="leftContainer">
+          <header>
+            <div class="your-library invert">
+              <button class="flex items-center pointer" id="yourLibrary">
+                <img src="library.svg" alt="your-library" style="width: 25px" />
+                <a id="your-lib" href=""><b>Your Library</b></a>
+              </button>
+            </div>
+            <div class="add">
+              <button id="add">
+                <img src="add.svg" alt="add new playlist" />
+              </button>
+            </div>
+          </header>
+
+          <!--The songs list-->
+          <div class="songsListContainer">
+            <div class="songsList bg-grey">
+              <ul>
+                
+              </ul>
+            </div>
+          </div>
+
+          <!--Some imp links -->
+          <div class="footerLeft pointer">
+            <div>
+              <a href="">Legal</a>
+            </div>
+            <div>
+              <a href="">Safety and Privacy center </a>
+            </div>
+            <div>
+              <a href="">Privacy Policy</a>
+            </div>
+            <div>
+              <a href="">Cookies</a>
+            </div>
+            <div>
+              <a href="">About Ads</a>
+            </div>
+            <div>
+              <a href="">Accessibility</a>
+            </div>
+            <div>
+              <a href="">Cookies</a>
+            </div>
+            <!-- </div>
+          <!-- <div class="language">
+            <button class="bg-grey items-center flex" id="changeLanguage">
+              <img src="globe.svg" alt="globe" style="width: 20px;filter: invert(1);">
+              <b>English</b>
+            </button> -->
+          </div>
+        </div>
+      </div>
+
+      <!--Creating a right div-->
+      <div class="right bg-grey border">
+        <div class="right-container">
+          <div class="popularArtists">
+            <div class="section1Title flex">
+              <h2>Popular Artist</h2>
+              <a href="#">Show All</a>
+            </div>
+            <div class="section1 flex">
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imageContainer a"></div>
+                <div class="text">
+                  <h4><b>Pritam</b></h4>
+                  <p>Artist</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imageContainer b"></div>
+                <div class="text">
+                  <h4><b>A.R.Rahman</b></h4>
+                  <p>Artist</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imageContainer c"></div>
+                <div class="text">
+                  <h4><b>Arijit Singh</b></h4>
+                  <p>Artist</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imageContainer d"></div>
+                <div class="text">
+                  <h4><b>Sachin-Jigar</b></h4>
+                  <p>Artist</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imageContainer e"></div>
+                <div class="text">
+                  <h4><b>Anirudh Ravichander</b></h4>
+                  <p>Artist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popularAlbums">
+            <div class="section2Title flex">
+              <h2>Popular Albums</h2>
+              <a href="">Show All</a>
+            </div>
+            <div class="section2 flex">
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard f"></div>
+                <div class="text">
+                  <h4><b>Aashiqui 2</b></h4>
+                  <p>Mithoon, Ankit Tiwari, Jeet Ganguli</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard g"></div>
+                <div class="text">
+                  <h4><b>Making Memories</b></h4>
+                  <p>Karan Aujla, Ikky</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard h"></div>
+                <div class="text">
+                  <h4><b>Love Hotel</b></h4>
+                  <p>leftovermax</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard i"></div>
+                <div class="text">
+                  <h4><b>Glory</b></h4>
+                  <p>Yo Yo Honey Singh</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard j"></div>
+                <div class="text">
+                  <h4><b>Yeh Jawaani hai Deewani</b></h4>
+                  <p>Pritam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popularRadio">
+            <div class="section3Title flex">
+              <h2>Popular Radio</h2>
+              <a>Show All</a>
+            </div>
+            <div class="section3 flex">
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard k"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>With Mithoon, Sachin, Jigar, Vishal-shekhar</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard l"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>With Karan Aujla, Shubh, Sidhu Moose..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgcard m"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>With Harris Jayaraj, Anirudh Ravichander..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard n"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>With Pritam, Vishal-shekhar, Mohit..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard o"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>With Mohammed Rafi, Mukesh, Asha Bhosle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="featuredCharts">
+            <div class="section4Title flex">
+              <h2>Featured Charts</h2>
+              <a>Show All</a>
+            </div>
+            <div class="section4 flex">
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard p"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>Your weekly update of the most played track..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard q"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>Your weekly update of the most played track..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard r"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>Your daily update of the most played track..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard s"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>Your daily update of the most played track..</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="play-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="play-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <div class="imgCard t"></div>
+                <div class="text">
+                  <h4><b></b></h4>
+                  <p>Your daily update of the most played track..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="playbar flex justify-content">
+          <div class="seekbarContainer items-center">
+            <div id="seekbar" class="seekbar flex ">
+            </div>
+            <div class="circle"></div>
+          </div>
+          <div class="songinfo"></div>
+          <div class="songButtons flex">
+            <div class="previous-button-playbar">
+              <img  id="previous" src="previous-svgrepo-com.svg" alt="" />
+            </div>
+            <div class="play-button-playbar">
+              <img id="play"  src="play-playbar.svg" alt="" />
+            </div>
+            <div  class="next-button-playbar">
+              <img id="next" src="next-svgrepo-com.svg" alt="" />
+            </div>
+          </div>
+          <div class="songTime"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

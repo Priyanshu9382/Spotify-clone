@@ -1,0 +1,56 @@
+@media (max-width : 1000px) {
+    .navbar{
+        height: 50px;
+    }
+  
+    .navbar > *{
+      transform: scale(0.7);
+    }
+    .nav-left{
+        width: 20vw;
+    }
+    .nav-right{
+        width: 40vw;
+        justify-content: flex-start;
+    }
+    .nav-mid{
+        width: 40vw;
+        justify-content:flex-start;
+    }
+    .input {
+      width: 0vw;
+      border-radius: 23px;
+      height: 40px;
+      margin: 10px 0px;
+      background-color: #d3cacae6;
+      padding: 7px 0px 8px 50px;
+      font-size: small;
+    }
+    
+    .left{
+      position: absolute;
+      z-index: 1;
+      height: 100vh;
+      /* max-height: 100vh; */
+      width: 100vw;
+      max-width: 500px;
+      transition: all ease .3s;
+      left: -150%;
+      border: 1.4px solid white;
+    }
+  
+    
+    .right{
+      width: 100vw;
+    }
+    .playbar{
+      width: 100%;
+    }
+    .hamburger{
+      visibility: visible;
+      position: static;
+    }
+    .logo{
+      padding-left: 0px;
+    }
+  }
